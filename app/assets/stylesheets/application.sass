@@ -1,0 +1,82 @@
+@import font-awesome/font-awesome.scss
+@import boilerplate/normalize.sass
+@import boilerplate/typography.sass
+@import boilerplate/skeleton.sass
+@import boilerplate/helper.sass
+@import home.sass
+
+*
+  box-sizing: border-box
+
+body
+  background: black url(ship4.jpg) top center no-repeat
+
+header
+  margin: 30px 10px
+
+  .contact
+    position: absolute
+    right: 10px
+    text-align: right
+    top: 24px
+
+    .phone-number
+      color: #222
+      font-size: 1em
+      font-weight: bold
+      text-decoration: none
+
+
+.content
+  margin-bottom: 2rem
+
+  &.text
+    ul
+      display: none
+
+  &.list
+    .product
+      height: 200px
+
+    .product > p
+      display: none
+
+  .product
+    background: rgba(255, 255, 255, .8)
+    border: 1px solid lightgrey
+    float: left
+    height: 300px
+    width: 225px
+
+    h2
+      font-weight: 300
+      margin-bottom: .3em
+      text-align: center
+
+    p
+      padding: 1.5rem
+
+    em
+      display: block
+      font-size: 14px
+      margin-top: -10px
+      text-align: center
+
+    ul
+      li
+        line-height: 1.8em
+
+  .description
+    background: rgba(255, 255, 255, .8)
+    border: 1px solid lightgrey
+    margin-top: 20px
+    padding: 1.5rem
+
+footer
+  text-align: center
+  a
+    color: #222
+    text-decoration: none
+
+    span
+      text-decoration: underline

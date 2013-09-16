@@ -1,0 +1,14 @@
+-# For debugging purposes, serve jQuery in the unminified version in development environment
+- if Rails.env == 'development'
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"
+
+  :coffeescript
+    # if jQuery is undefined (maybe google cdn is temporarily down or slow) then serve jquery manually
+    document.write('<script type="text/javascript" src="/assets/lib/jquery.js"><\/script>') unless jQuery?
+
+- else
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+
+  :coffeescript
+    # if jQuery is undefined (maybe google cdn is temporarily down or slow then serve jquery manually
+    document.write('<script type="text/javascript" src="/assets/lib/jquery.min.js"><\/script>') unless jQuery?

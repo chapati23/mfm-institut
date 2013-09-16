@@ -1,0 +1,111 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %meta{ charset: "utf-8" }
+    %title MfM Institut — Marktforschung für Medien
+    %meta{ content: "Es muss doch noch besser gehen – das MfM Institut justiert Ihr Produkt, individuell auf Ihre Bedürfnisse und die Bedürfnisse Ihrer Kunden zugeschnitten.", name: "description" }
+    %meta{ content: "width=device-width, initial-scale=1", name: "viewport" }
+    = javascript_include_tag "lib/prefixfree"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    /[if lt IE 9] <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    = csrf_meta_tags
+
+  %body
+    .container
+      %header.sixteen.columns
+        %img#logo.four-columns{ src: "/assets/logo.png" }
+        .contact
+          %h4 Kontakt
+          %i.icon-phone
+          %a.phone-number{ href: "tel:+491715220344" } 040-12345678-0
+
+      .content.sixteen.columns.list
+        .product.produktoptimierung.one-third.column.alpha
+          %h2 Produktoptimierung
+          %em Es geht noch besser!
+          %ul
+            %li Wir analysieren den Wettbewerb
+            %li Wir justieren Ihr Produkt
+            %li Wir handeln
+
+          %p
+            Das MfM Institut justiert Ihr Produkt,
+            individuell auf Ihre Bedürfnisse und die Bedürfnisse Ihrer Kunden zugeschnitten.
+            Unsere Ergebnisse sind belastbar, der Erfolg messbar!
+
+        .product.produktprofilierung.one-third.column
+          %h2 Produktprofilierung
+          %em Es geht noch schärfer!
+          %ul
+            %li Wir analysieren den Wettbewerb
+            %li Wir justieren Ihr Produkt
+            %li Wir handeln
+
+          %p
+            Das MfM Institut lässt ihr Produkt hervor stechen,
+            damit es auch im Anzeigenwettbewerb gewinnt. Wir entwickeln mit Ihnen span&shy;nende Geschichten, die die emotionalen Stärken herausarbeiten.
+
+
+        .product.relaunch.one-third.column.omega
+          %h2 Launch & Relaunch
+          %em Da geht doch noch was!
+          %ul
+            %li Wir analysieren den Wettbewerb
+            %li Wir justieren Ihr Produkt
+            %li Wir handeln
+
+          %p
+            Die Kunden warten auf Ihre Innovationen.
+
+            Mit Hilfe von MfM können Sie sich auf die Ideen konzentrieren, die
+            Begeisterung auslösen und die etwas Besonderes bieten.
+
+
+        .description.sixteen.columns.alpha.omega
+          Wir arbeiten heraus, welch überragende Rolle ihr Medium im Alltag fühlt,
+          wie wohl sich Ihre Kunden beim Lesen fühlen,
+          wie lange / wie intensiv ihr Angebot genutzt wird,
+          wie nützlich sich die Anzeigenplatzierung in Ihrem
+          Angebot für den Kunden auswirken kann.
+
+
+          MfM setzt alles daran, Ihren Anzeigenerfolg zu steigern
+
+          Im Fokus steht dabei Ihr Produkt in allen relevanten Aspekten von der Titel-seite über die Angebotsdramaturgie bis zur Tonalität von Headlines und Text.
+
+          Am Ende der Analyse erhalten Sie ein MfM-Zertifikat mit konkreten Handlungsvorschlägen zur Optimierung der Basisanforderungen
+          und Vertiefung der Begeisterung für Ihr Produkt.
+
+          Im Detail gehen wir folgendermaßen vor:
+
+          %ul
+            %li
+              MfM wirft ein Auge auf den Wettbewerb:
+              Wir ermitteln die relevanten Unterschiede zum Wettbewerb
+
+            %li
+              MfM konzentriert sich auf Ihr Produkt:
+              Wir matchen die Erwartungen der Zielgruppe mit Ihrem Angebot
+              Wir ordnen die Wünsche in Basisanforderungen und
+              Begeisterungsfaktoren
+
+            %li
+              MfM entwickelt die entscheidenden Maßnahmen:
+              Wir schonen Ihre Ressourcen durch klare Prioritäten
+
+
+        -#= yield
+
+      %footer
+        %a{ href: "impressum" }
+          %i.icon-anchor
+          %br
+          %span Impressum
+
+    = render "shared/jquery"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
