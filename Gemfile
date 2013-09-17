@@ -45,6 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'haml'
+gem 'railshoster'
 
 group :development do
   gem 'powder'
