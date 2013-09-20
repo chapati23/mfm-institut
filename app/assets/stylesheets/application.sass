@@ -1,4 +1,5 @@
 @import font-awesome/font-awesome.scss
+@import boilerplate/base.sass
 @import boilerplate/normalize.sass
 @import boilerplate/typography.sass
 @import boilerplate/skeleton.sass
@@ -20,12 +21,14 @@ header
     text-align: right
     top: 24px
 
+    .icon-phone
+      color: $green
+
     .phone-number
-      color: #222
+      color: $grey
       font-size: 1em
       font-weight: bold
       text-decoration: none
-
 
 .content
   margin-bottom: 2rem
@@ -47,6 +50,12 @@ header
     float: left
     height: 300px
     width: 225px
+
+    &:hover
+      border-color: lighten($green, 20%)
+      box-shadow: 0 0 8px $green
+      cursor: pointer
+      transition: box-shadow 200ms ease-out
 
     h2
       font-weight: 300
@@ -73,10 +82,15 @@ header
     padding: 1.5rem
 
 footer
+  margin-bottom: 10px
   text-align: center
-  a
-    color: #222
-    text-decoration: none
 
-    span
-      text-decoration: underline
+  .icon-anchor
+    display: block
+    margin-bottom: 15px
+
+  a
+    border-bottom: 1px solid $grey
+    color: $grey
+    font-size: .8em
+    text-decoration: none

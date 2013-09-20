@@ -19,6 +19,7 @@
     .container
       %header.sixteen.columns
         %img#logo.four-columns{ src: "/assets/logo.png" }
+
         .contact
           %h4 Kontakt
           %i.icon-phone
@@ -102,10 +103,8 @@
         -#= yield
 
       %footer
-        %a{ href: "impressum" }
-          %i.icon-anchor
-          %br
-          %span Impressum
+        %i.icon-anchor
+        %a{ href: "impressum" } Impressum
 
     = render "shared/jquery"
     = javascript_include_tag "application", "data-turbolinks-track" => true
