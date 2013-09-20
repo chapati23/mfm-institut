@@ -21,5 +21,6 @@ module Mfm
     # config.i18n.default_locale = :de
 
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    config.assets.precompile += ['lib/prefixfree.js', 'lib/jquery.min.js']
   end
 end
