@@ -21,10 +21,10 @@ header
     text-align: right
     top: 24px
 
-    .icon-phone
+    .icon-phone, .icon-envelope
       color: $green
 
-    .phone-number
+    .phone-number, .email
       color: $grey
       font-size: 1em
       font-weight: bold
@@ -45,11 +45,12 @@ header
       display: none
 
   .product
-    background: rgba(255, 255, 255, .8)
+    background: opacify($green, .8)
     border: 1px solid lightgrey
+    color: white
     float: left
     height: 300px
-    width: 225px
+    margin-top: 20px
 
     &:hover
       border-color: lighten($green, 20%)
