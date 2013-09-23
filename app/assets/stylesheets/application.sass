@@ -44,10 +44,25 @@ header
     .product > p
       display: none
 
+  .box.sixteen
+    background: white image-url("portrait7.jpg") top left no-repeat
+    height: 500px
+
+  #portrait
+    float: left
+    width: 300px
+
+  .description
+    background: rgba(255, 255, 255, .5)
+    float: left
+    margin-left: 400px
+    padding: 20px
+    width: 470px
+
   .product
-    background: opacify($green, .8)
+    background: rgba(255, 255, 255, .8)
     border: 1px solid lightgrey
-    color: white
+    color: $grey
     float: left
     height: 300px
     margin-top: 20px
@@ -76,7 +91,7 @@ header
       li
         line-height: 1.8em
 
-  .description
+  .box
     background: rgba(255, 255, 255, .8)
     border: 1px solid lightgrey
     margin-top: 20px
@@ -95,3 +110,16 @@ footer
     color: $grey
     font-size: .8em
     text-decoration: none
+
+.product.green
+  h2
+    background: #58979F
+    color: white
+    margin-top: 0
+    padding-top: .3em
+
+  em
+    background: #58979F
+    border-bottom: 1px solid lightgrey
+    color: white
+    padding: 0 0 .6em
