@@ -1,10 +1,11 @@
-@import font-awesome/font-awesome.scss
-@import boilerplate/base.sass
-@import boilerplate/normalize.sass
-@import boilerplate/typography.sass
-@import boilerplate/skeleton.sass
-@import boilerplate/helper.sass
-@import home.sass
+@import font-awesome/font-awesome
+@import boilerplate/base
+@import boilerplate/normalize
+@import boilerplate/typography
+@import boilerplate/skeleton
+@import boilerplate/helper
+@import home
+@import produkte
 
 *
   box-sizing: border-box
@@ -37,13 +38,6 @@ header
     ul
       display: none
 
-  &.list
-    .product
-      height: 200px
-
-    .product > p
-      display: none
-
   .box.sixteen
     background: white image-url("portrait7.jpg") top left no-repeat
     height: 500px
@@ -55,43 +49,10 @@ header
   .description
     background: rgba(255, 255, 255, .5)
     float: left
+    font-size: 1.5em
     margin-left: 400px
     padding: 20px
     width: 470px
-
-  .product
-    background: rgba(255, 255, 255, .8)
-    border: 1px solid lightgrey
-    color: $grey
-    float: left
-    height: 300px
-    margin-top: 20px
-
-    &:hover
-      border-color: lighten($green, 20%)
-      box-shadow: 0 0 8px $green
-      cursor: pointer
-      transition: box-shadow 200ms ease-out
-
-    h2
-      color: $green
-      font-weight: 300
-      margin-bottom: .3em
-      text-align: center
-
-    p
-      padding: 1.5rem
-
-    em
-      color: $green
-      display: block
-      font-size: 14px
-      margin-top: -10px
-      text-align: center
-
-    ul
-      li
-        line-height: 1.8em
 
   .box
     background: rgba(255, 255, 255, .8)
