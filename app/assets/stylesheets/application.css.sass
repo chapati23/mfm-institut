@@ -1,5 +1,4 @@
-@import font-awesome/font-awesome
-@import font-verlag
+@import fonts
 @import boilerplate/base
 @import boilerplate/normalize
 @import boilerplate/typography
@@ -28,8 +27,10 @@ header
     .phone-number, .email
       color: $grey
       font-size: 1em
-      font-weight: bold
       text-decoration: none
+
+      &:hover
+        text-decoration: underline
 
 .content
   margin-bottom: 2rem
