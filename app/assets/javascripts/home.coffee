@@ -1,5 +1,6 @@
 $ ->
   $description = $('.description')
+  $signature = $('.signature')
   $stage = $('.stage')
   $('.details').attr('contenteditable', true)
 
@@ -23,6 +24,7 @@ $ ->
 
     # fade in default content
     $description.css(opacity: 1).removeClass('inactive')
+    $signature.css(opacity: 1).removeClass('inactive')
 
     # update url to enable deep links
     window.history.pushState { state: 'root' }, 'MfM Institut - Marktforschung für Medien', '/'
@@ -45,6 +47,7 @@ $ ->
 
     # fade out default content
     $description.css(opacity: 0)
+    $signature.css(opacity: 0)
 
     # blend in product
     $produkt.addClass('active')

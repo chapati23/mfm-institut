@@ -39,7 +39,7 @@ header
       display: none
 
   .stage.box
-    background: white image-url("portrait7.jpg") top left no-repeat
+    background: white image-url("portrait.jpg") top left no-repeat
     height: 500px
 
     // hack to enable hardware acceleration
@@ -51,15 +51,19 @@ header
       -webkit-filter: blur(10px)
 
   .description
-    background: rgba(255, 255, 255, .5)
-    float: left
-    font-size: 1.5em
-    font-style: italic
-    font-weight: 300
-    margin-left: 400px
+    background: rgba(255, 255, 255, 0.8)
+    left: 450px
     padding: 20px
+    position: absolute
+    top: 40px
     transition: opacity 200ms cubic-bezier(.10, .70, .10, 1)
-    width: 470px
+    width: 430px
+
+  .signature
+    left: 690px
+    position: absolute
+    top: 250px
+    width: 180px
 
   .box
     background: rgba(255, 255, 255, .8)
