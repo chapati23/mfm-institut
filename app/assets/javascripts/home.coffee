@@ -73,13 +73,13 @@ $ ->
     $section = $(this)
 
     # Wenn das angeklickte Produkt bereits sichtbar ist, dann deaktiviere das Produkt
-    if $('.details.active').length and $section.hasClass('active')
+    if $('.details.active').length and $section.is('.active')
       hideSection $section
 
     # Wenn es ein aktives Produkt gibt und das aktive Produkt NICHT das angeklickte ist
     # dann verstecke das sichtbare Produkt und aktiviere das angeklickte Produkt
-    else if $('.details.active').length and !$section.hasClass('active')
-      hideSection $('.details.active').prev(), 'fast'
+    else if $('.details.active').length and !$section.is('.active')
+      hideSection $('.active.section'), 'fast'
       showSection $section
 
     else
