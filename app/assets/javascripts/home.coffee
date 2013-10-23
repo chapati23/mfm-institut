@@ -24,7 +24,6 @@ $ ->
     # fade in default content
     $description.css(opacity: 1)
     $signature.css(opacity: 1)
-    $vitaButton.css(opacity: 1)
 
     # update url to enable deep links
     window.history.pushState { state: 'root' }, 'MfM Institut - Marktforschung für Medien', '/'
@@ -47,7 +46,6 @@ $ ->
     # fade out default content
     $description.css(opacity: 0)
     $signature.css(opacity: 0)
-    $vitaButton.css(opacity: 0)
 
     # blend in product
     $section.addClass('active')

@@ -24,13 +24,18 @@ header
     .icon-phone, .icon-envelope
       color: $green
 
-    .phone-number, .email
+    .phone-number, .email, .vita
       color: $grey
       font-size: 1em
+      position: relative
       text-decoration: none
+      z-index: 1
 
       &:hover
         text-decoration: underline
+
+    .vita.active
+      color: $green
 
 .content
   margin-bottom: 2rem
@@ -49,7 +54,6 @@ header
     // hack to enable hardware acceleration
     backface-visibility: hidden
     perspective: 1000
-
 
     &.inactive
       -webkit-filter: blur(10px)
