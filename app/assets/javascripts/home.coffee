@@ -1,20 +1,19 @@
 $ ->
   $description = $('.description')
   $signature = $('.signature')
+  $vitaButton = $('.vita')
   $stage = $('.stage')
   $('.details').attr('contenteditable', true)
 
   hideSection = ($section, speed) ->
     speed ? speed : 'normal'
     $section.name       = $section.attr("name")
-    $section.details    = $section.next(".details")
-    $section.removeIcon = $section.details.children('.icon-remove-sign')
+    $section.details    = $("##{$section.name}")
 
     # disable animations if speed is set to 'fast'
     if speed is 'fast' then $section.details.addClass('disable-animations')
 
     # blend out product
-    $section.removeIcon.hide()
     $section.details.removeClass('active').addClass('inactive')
     $section.removeClass('active')
 
@@ -23,8 +22,9 @@ $ ->
     setTimeout callback, 100
 
     # fade in default content
-    $description.css(opacity: 1).removeClass('inactive')
-    $signature.css(opacity: 1).removeClass('inactive')
+    $description.css(opacity: 1)
+    $signature.css(opacity: 1)
+    $vitaButton.css(opacity: 1)
 
     # update url to enable deep links
     window.history.pushState { state: 'root' }, 'MfM Institut - Marktforschung für Medien', '/'
@@ -39,8 +39,7 @@ $ ->
   showSection = ($section, speed) ->
     speed ? speed : 'normal'
     $section.name       = $section.attr("name")
-    $section.details    = $section.next(".details")
-    $section.removeIcon = $section.details.children('.icon-remove-sign')
+    $section.details    = $("##{$section.name}")
 
     # disable animations if speed is set to 'fast'
     if speed is 'fast' then $section.details.addClass('disable-animations')
@@ -48,14 +47,14 @@ $ ->
     # fade out default content
     $description.css(opacity: 0)
     $signature.css(opacity: 0)
+    $vitaButton.css(opacity: 0)
 
     # blend in product
     $section.addClass('active')
     $section.details.removeClass('inactive').addClass('active')
-    $section.removeIcon.show()
 
     # blur background image
-    callback = -> $stage.addClass('inactive')
+    callback = -> $stage.addClass('inactive') unless $section.name is "vita"
     setTimeout callback, 100
 
     # update url to enable deep links
@@ -68,12 +67,12 @@ $ ->
 
 
 
-  $(document).on 'click', '.icon-remove-sign', -> hideSection($('.details.active').prev('.section'))
+  $(document).on 'keydown', (event) -> if event.which is 27 then hideSection $(".active.section")
+  $(document).on 'click', '.icon-remove-sign', -> hideSection $('.active.section')
 
 
   $(".section").click ->
     $section = $(this)
-    $section.details = $section.next('.details')
 
     # Wenn das angeklickte Produkt bereits sichtbar ist, dann deaktiviere das Produkt
     if $('.details.active').length and $section.hasClass('active')
@@ -90,11 +89,13 @@ $ ->
 
 
   $('.impressum').click (event) -> event.preventDefault()
+  $('.vita').click (event) -> event.preventDefault()
 
 
   # really simple hardcoded router
   switch window.location.pathname.substr(1)
-    when 'produktoptimierung'  then showSection($('.optimierung'),  'fast') unless $('#optimierung').is('.active')
-    when 'produktprofilierung' then showSection($('.profilierung'), 'fast') unless $('#profilierung').is('.active')
-    when 'produktentwicklung'  then showSection($('.entwicklung'),  'fast') unless $('#entwicklung').is('.active')
-    when 'impressum'           then showSection($('.impressum'),    'fast') unless $('#impressum').is('.active')
+    when 'produktoptimierung'  then showSection($('.produktoptimierung'),  'fast') unless $('#produktoptimierung').is('.active')
+    when 'produktprofilierung' then showSection($('.produktprofilierung'), 'fast') unless $('#produktprofilierung').is('.active')
+    when 'produktentwicklung'  then showSection($('.produktentwicklung'),  'fast') unless $('#produktentwicklung').is('.active')
+    when 'impressum'           then showSection($('.impressum'),           'fast') unless $('#impressum').is('.active')
+    when 'vita'                then showSection($('.vita'),                'fast') unless $('#vita').is('.active')
