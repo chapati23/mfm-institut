@@ -9,6 +9,7 @@ Mfm::Application.routes.draw do
   get 'produktoptimierung'  => 'home#index'
   get 'produktprofilierung' => 'home#index'
   get 'produktentwicklung'  => 'home#index'
+  get 'impressum'           => 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

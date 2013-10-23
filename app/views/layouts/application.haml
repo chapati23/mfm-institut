@@ -18,13 +18,11 @@
   %body
     .container
       %header.sixteen.columns
-        = image_tag "logo.png", id: "logo", width: "300px"
+        = link_to image_tag("logo.png", id: "logo", width: "300px"), "/"
 
         .contact
-          -#%i.icon-phone
           %a.phone-number{ href: "tel:+494046863431" } 040-46863431
           %br
-          -#%i.icon-envelope
           %a.email{ href: "mailto:paetz@mfm-institut.de" } paetz@mfm-institut.de
 
       .content.sixteen.columns
@@ -37,7 +35,8 @@
 
       %footer
         %i.icon-anchor
-        %a{ href: "impressum" } Impressum
+        %a.section.impressum{ href: "impressum", name: "impressum" } Impressum
+        = render :partial => 'pages/impressum'
 
     = render "shared/jquery"
     = javascript_include_tag "application", "data-turbolinks-track" => true

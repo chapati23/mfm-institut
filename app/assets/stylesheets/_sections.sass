@@ -1,0 +1,169 @@
+.details
+  background: rgba(255, 255, 255, .8)
+  border: 1px solid lightgrey
+  font-size: 0.9rem
+  left: 10px
+  overflow: auto
+  padding: 20px
+  position: absolute
+
+  & + .icon-remove-sign
+    color: lighten($grey, 20%)
+    cursor: pointer
+    opacity: 0
+    position: absolute
+    right: -10px
+    top: 5px
+    transition: color 200ms ease-in-out
+    z-index: 2
+
+    &:hover
+      color: $grey
+      text-shadow: 0 0 5px rgba($grey, .2)
+
+    &:active
+      color: $grey
+      text-shadow: none
+      transform: translateY(1px)
+
+  h1
+    color: $green
+    font-family: Verlag
+    font-size: 1.8rem
+    font-weight: 700
+    margin: 0 0 10px
+    padding: 0
+    text-align: left
+
+  &.inactive
+    height: 300px
+    opacity: 0
+    overflow: hidden
+    top: 540px
+    transition: all 200ms cubic-bezier(.10, .70, .10, 1), opacity 0 linear 100ms, z-index 0 linear 200ms
+    width: 300px
+    z-index: 0
+
+  &.active
+    height: 500px
+    left: 0 !important
+    opacity: 1
+    text-align: left
+    top: 20px
+    transition: all 200ms cubic-bezier(.10, .70, .10, 1)
+    width: 940px
+    z-index: 1
+
+    & + .icon-remove-sign
+      left: inherit !important
+      opacity: 1
+      right: -10px !important
+      top: 5px !important
+      transition: opacity 200ms ease-in-out 200ms
+      z-index: 2
+
+
+
+
+.content
+  .section
+    background: rgba(255, 255, 255, .9)
+    border: 1px solid lightgrey
+    color: $grey
+    float: left
+    height: 300px
+    margin-top: 20px
+    position: relative
+    z-index: 1
+
+    &:hover
+      border-color: lighten($green, 20%)
+      box-shadow: 0 0 8px $green
+      cursor: pointer
+      transition: box-shadow 200ms ease-out
+
+    &.active
+      border-color: lighten($green, 20%)
+      box-shadow: 0 0 8px $green
+      transition: all 200ms cubic-bezier(.10, .70, .10, 1)
+
+    h2
+      color: $green
+      font-family: Verlag
+      font-weight: 700
+      margin-bottom: .3rem
+      text-align: center
+
+    p
+      padding: 1.5rem
+
+    em
+      color: $green
+      display: block
+      font-size: 0.8rem
+      margin-top: -5px
+      text-align: center
+
+    ul
+      padding-right: 20px
+
+      li
+        font-size: 0.9rem
+        line-height: 1.5
+        margin-bottom: 8px
+
+#optimierung
+  left: 0px
+
+  & + .icon-remove-sign
+    left: 285px
+    position: absolute
+    top: 525px
+
+#profilierung
+  left: 320px
+
+  & + .icon-remove-sign
+    left: 605px
+    position: absolute
+    top: 525px
+
+#entwicklung
+  left: 640px
+
+  & + .icon-remove-sign
+    left: 925px
+    position: absolute
+    top: 525px
+
+#impressum
+  height: 100px
+  left: 330px
+  top: 893px
+
+  &.active
+    height: 500px
+    left: 10px !important
+    top: 173px
+
+    & + .icon-remove-sign
+      right: -2px !important
+      top: 158px !important
+
+  .disclaimer
+    margin-top: 30px
+
+  table
+    td
+      vertical-align: top
+      width: 33%
+
+  .tmg
+
+  .kontakt
+
+  .bildrechte
+    margin: 30px 0
+
+    a
+      color: $grey
