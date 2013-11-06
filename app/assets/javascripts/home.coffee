@@ -1,9 +1,7 @@
 $ ->
   $description = $('.description')
   $signature = $('.signature')
-  $vitaButton = $('.vita')
   $stage = $('.stage')
-  $('.details').attr('contenteditable', true)
 
   hideSection = ($section, speed) ->
     speed ? speed : 'normal'
@@ -15,6 +13,7 @@ $ ->
 
     # blend out product
     $section.details.removeClass('active').addClass('inactive')
+    $section.find('button').removeClass("active")
     $section.removeClass('active')
 
     # unblur background image
@@ -49,6 +48,7 @@ $ ->
 
     # blend in product
     $section.addClass('active')
+    $section.find('button').addClass("active")
     $section.details.removeClass('inactive').addClass('active')
 
     # blur background image

@@ -72,9 +72,10 @@
     border: 1px solid lightgrey
     color: $grey
     float: left
-    height: 300px
+    height: 320px
     margin-top: 20px
     position: relative
+    text-align: center
     z-index: 1
 
     &:hover
@@ -112,6 +113,7 @@
         font-size: 0.9rem
         line-height: 1.5
         margin-bottom: 8px
+        text-align: left
 
   a.section.vita
     background: transparent
@@ -129,37 +131,6 @@
       border: none
       text-decoration: underline
 
-  button.section.vita
-    background: linear-gradient(#5CB6A7, $green)
-    bottom: 90px
-    border: 1px solid
-    border-bottom-color: darken($green, 30%)
-    border-left-color: darken($green, 20%)
-    border-right-color: darken($green, 20%)
-    border-top-color: darken($green, 10%)
-    box-shadow: inset 0 1px 1px 0 lighten(#5CB6A7, 20%), 0 0 5px lighten($grey, 20%)
-    color: white
-    font-size: 1.3rem
-    height: 50px
-    padding: 10px 20px
-    position: absolute
-    right: 125px
-    z-index: 3
-
-    &:hover
-      background: linear-gradient(darken(#5CB6A7, 5%), darken($green, 5%))
-      border-bottom-color: darken($green, 30%)
-      border-left-color: darken($green, 20%)
-      border-right-color: darken($green, 20%)
-      border-top-color: darken($green, 10%)
-      box-shadow: inset 0 1px 1px 0 lighten(#5CB6A7, 20%), 0 0 5px lighten($grey, 20%)
-
-    &:active
-      box-shadow: inset 0 1px 9px 0 rgba(0, 0, 0, 0.6)
-      transition: all 0ms
-
-    &:focus
-      outline: 0
 
 
 #produktoptimierung
@@ -169,6 +140,21 @@
     left: 285px
     position: absolute
     top: 525px
+
+  ul
+    overflow: hidden
+    margin: 0
+    padding: 20px 0
+
+  li.green
+    color: $green
+    float: left
+    font-size: 1rem
+    font-weight: bold
+    list-style: none
+    margin: 0 10px 10px 0
+    text-align: center
+    width: 214px
 
 #produktprofilierung
   left: 320px
@@ -197,10 +183,11 @@
     left: 470px !important
     width: 470px !important
 
-  h3
-    font-weight: 700
+  strong
+    display: block
+    font-weight: 400
     line-height: 1.2
-    margin: 2rem 0 0.8rem
+    margin: 1rem 0 0.8rem
 
 
 #impressum
@@ -234,3 +221,40 @@
 
     a
       color: $grey
+
+
+button.green
+  background: linear-gradient(#5CB6A7, $green)
+  border: 1px solid
+  border-bottom-color: darken($green, 30%)
+  border-left-color: darken($green, 20%)
+  border-right-color: darken($green, 20%)
+  border-top-color: darken($green, 10%)
+  bottom: 20px
+  box-shadow: inset 0 1px 1px 0 lighten(#5CB6A7, 20%), 0 0 5px lighten($grey, 20%)
+  color: white
+  font-size: 1.2rem
+  height: 40px
+  left: 50%
+  margin-left: -45px
+  padding: 9px 10px 10px
+  position: absolute
+  text-align: center
+  width: 90px
+
+
+  &:hover, &.active
+    background: linear-gradient(darken(#5CB6A7, 5%), darken($green, 5%))
+    border-bottom-color: darken($green, 30%)
+    border-left-color: darken($green, 20%)
+    border-right-color: darken($green, 20%)
+    border-top-color: darken($green, 10%)
+    box-shadow: inset 0 1px 1px 0 lighten(#5CB6A7, 20%), 0 0 5px lighten($grey, 20%)
+
+  &:active, &.active
+    box-shadow: inset 0 1px 9px 0 rgba(0, 0, 0, 0.6)
+    transition: all 0ms
+
+  &:focus
+    outline: 0
+
