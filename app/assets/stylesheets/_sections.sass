@@ -72,7 +72,7 @@
     border: 1px solid lightgrey
     color: $grey
     float: left
-    height: 320px
+    height: 20rem
     margin-top: 20px
     position: relative
     text-align: center
@@ -176,12 +176,17 @@
   &.inactive
     height: 40px
     left: 774px
-    top: -92px
+    top: -77px
     width: 166px
 
   &.active
-    left: 470px !important
-    width: 470px !important
+    background: white
+    left: 462px !important
+    top: -1px
+    width: 478px !important
+
+  &+ .icon-remove-sign
+    top: -15px !important
 
   strong
     display: block
@@ -230,7 +235,7 @@ button.green
   border-left-color: darken($green, 20%)
   border-right-color: darken($green, 20%)
   border-top-color: darken($green, 10%)
-  bottom: 20px
+  bottom: 1rem
   box-shadow: inset 0 1px 1px 0 lighten(#5CB6A7, 20%), 0 0 5px lighten($grey, 20%)
   color: white
   font-size: 1.2rem

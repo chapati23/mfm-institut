@@ -10,7 +10,7 @@
   box-sizing: border-box
 
 body
-  background: black image-url("ship4.jpg") top center no-repeat
+  background: black image-url("ship.jpg") top center no-repeat
 
 header
   margin: 30px 10px
@@ -48,7 +48,7 @@ header
       display: none
 
   .stage.box
-    background: white image-url("portrait.jpg") top left no-repeat
+    background: white image-url("portrait.jpg") top left / 100% no-repeat
     height: 500px
     position: relative
     z-index: 1
@@ -59,21 +59,6 @@ header
 
     &.inactive
       -webkit-filter: blur(10px)
-
-  .description
-    background: rgba(255, 255, 255, 0.8)
-    left: 450px
-    padding: 20px
-    position: absolute
-    top: 40px
-    transition: opacity 200ms cubic-bezier(.10, .70, .10, 1)
-    width: 430px
-
-  .signature
-    left: 690px
-    position: absolute
-    top: 250px
-    width: 180px
 
   .cv
     background: lighten($green, 20%)

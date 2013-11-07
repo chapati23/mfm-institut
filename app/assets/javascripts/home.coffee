@@ -1,6 +1,4 @@
 $ ->
-  $description = $('.description')
-  $signature = $('.signature')
   $stage = $('.stage')
 
   hideSection = ($section, speed) ->
@@ -20,10 +18,6 @@ $ ->
     callback = -> $stage.removeClass('inactive')
     setTimeout callback, 100
 
-    # fade in default content
-    $description.css(opacity: 1)
-    $signature.css(opacity: 1)
-
     # update url to enable deep links
     window.history.pushState { state: 'root' }, 'MfM Institut - Marktforschung für Medien', '/'
 
@@ -41,10 +35,6 @@ $ ->
 
     # disable animations if speed is set to 'fast'
     if speed is 'fast' then $section.details.addClass('disable-animations')
-
-    # fade out default content
-    $description.css(opacity: 0)
-    $signature.css(opacity: 0)
 
     # blend in product
     $section.addClass('active')
