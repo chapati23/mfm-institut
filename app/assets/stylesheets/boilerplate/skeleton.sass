@@ -209,40 +209,41 @@
       //padding-left: 720px
   ///* Offsets
 
-/*  #Mobile (Portrait)
- *==================================================
 
+/*==================================================
+/* Mobile (Portrait)
 /* Note: Design for a width of 320px
 
-//@media only screen and (max-width: 767px)
-  //.container
-    //width: 300px
-    //.columns, .column
-      //margin: 0
-    //.one
-      //&.column, &.columns
-        //width: 300px
-    //.two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .thirteen.columns, .fourteen.columns, .fifteen.columns, .sixteen.columns, .one-third.column, .two-thirds.column
-      //width: 300px
-    //.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .offset-by-twelve, .offset-by-thirteen, .offset-by-fourteen, .offset-by-fifteen
-      //padding-left: 0
+@media only screen and (max-width: 479px)
+  .container
+    overflow: hidden
+    width: 300px
+
+    .columns, .column
+      margin: 0
+    .one
+      &.column, &.columns
+        width: 300px
+    .two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .thirteen.columns, .fourteen.columns, .fifteen.columns, .sixteen.columns, .one-third.column, .two-thirds.column
+      width: 300px
+    .offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .offset-by-twelve, .offset-by-thirteen, .offset-by-fourteen, .offset-by-fifteen
+      padding-left: 0
   /* Offsets
 
-/* #Mobile (Landscape)
- *==================================================
-
+/*==================================================
+/* Mobile (Landscape)
 /* Note: Design for a width of 480px
 
-//@media only screen and (min-width: 480px) and (max-width: 767px)
-  //.container
-    //width: 420px
-    //.columns, .column
-      //margin: 0
-    //.one
-      //&.column, &.columns
-        //width: 420px
-    //.two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .thirteen.columns, .fourteen.columns, .fifteen.columns, .sixteen.columns, .one-third.column, .two-thirds.column
-      //width: 420px
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  .container
+    width: 540px
+    .columns, .column
+      margin: 0
+    .one
+      &.column, &.columns
+        width: 540px
+    .two.columns, .three.columns, .four.columns, .five.columns, .six.columns, .seven.columns, .eight.columns, .nine.columns, .ten.columns, .eleven.columns, .twelve.columns, .thirteen.columns, .fourteen.columns, .fifteen.columns, .sixteen.columns, .one-third.column, .two-thirds.column
+      width: 540px
 
 /* #Clearing
  *==================================================

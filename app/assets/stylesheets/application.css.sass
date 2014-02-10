@@ -14,12 +14,40 @@ body
 
 header
   margin: 30px 10px
+  position: relative
+  z-index: 2
+
+  +breakpoint(xs)
+    #logo
+      margin-top: 15px
+
+  +breakpoint(s)
+    #logo
+      margin-top: 15px
 
   .contact
     position: absolute
     right: 10px
     text-align: right
     top: 24px
+
+    +breakpoint(xs)
+      margin-right: -150px
+      right: 50%
+      text-align: center
+      top: 434px
+      width: 300px
+
+    +breakpoint(s)
+      top: 27px
+
+      //&:after
+        //background: url("signature.png") no-repeat
+        //content: ''
+        //display: block
+        //height: 67px
+        //margin: 30px auto 0
+        //width: 180px
 
     .icon-phone, .icon-envelope
       color: $green
@@ -39,6 +67,58 @@ header
       color: $green
       text-decoration: underline
 
+    +breakpoint(xs)
+      font-size: 0.9em
+
+      .phone-number
+        float: left
+        text-align: left
+        text-decoration: underline
+
+      .email
+        float: right
+        text-align: right
+        text-decoration: underline
+
+      .vita
+        clear: both
+        cursor: default
+        font-family: Verlag
+        font-size: 2em
+        text-decoration: none
+        top: 25px
+
+        &:before
+          content: "— "
+
+        &:after
+          content: " —"
+
+        &:hover
+          text-decoration: none
+
+    +breakpoint(s)
+      .phone-number, .email
+        text-decoration: underline
+
+      .vita
+        cursor: default
+        font-family: Verlag
+        font-size: 2em
+        left: -100px
+        text-decoration: none
+        top: 345px
+
+        &:before
+          content: "— "
+
+        &:after
+          content: " —"
+
+        &:hover
+          text-decoration: none
+
+
 .content
   margin-bottom: 2rem
   position: relative
@@ -52,10 +132,19 @@ header
     height: 500px
     position: relative
     z-index: 1
-
     // hack to enable hardware acceleration
     backface-visibility: hidden
     perspective: 1000
+
+    +breakpoint(xs)
+      background-size: 205%
+      height: 310px
+      margin-top: 10px
+
+    +breakpoint(s)
+      height: 288px
+      margin-bottom: 50px
+      margin-top: 5px
 
     &.inactive
       -webkit-filter: blur(10px)
@@ -97,6 +186,14 @@ footer
     &:hover
       border-color: white
       color: white
+
+  +breakpoint(xs)
+    .impressum
+      display: none
+
+  +breakpoint(s)
+    .impressum
+      display: none
 
 
 .disable-animations

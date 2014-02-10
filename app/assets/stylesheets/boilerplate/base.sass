@@ -1,6 +1,52 @@
 $grey: #222
 $green: #58979F
+$media-query--xs: '(max-width: 479px)'
+$media-query--s: '(min-width: 480px) and (max-width: 767px)'
+$media-query--m: '(min-width: 768px) and (max-width: 1023px)'
+$media-query--l: '(min-width: 1024px) and (max-width: 1279px)'
+$media-query--xl: '(min-width: 1280px)'
+
+@mixin breakpoint($point)
+  @if $point == xs
+    @media #{$media-query--xs }
+      @content
+  @if $point == s
+    @media #{$media-query--s }
+      @content
+  @if $point == m
+    @media #{$media-query--m }
+      @content
+  @if $point == l
+    @media #{$media-query--l }
+      @content
+  @if $point == xl
+    @media #{$media-query--xl }
+      @content
+
 
 a:hover
   border-color: $green
   color: $green
+
+html.debug:before
+  background-color: #fff1c2
+  border-bottom: 1px solid darken(#fff1c2, 15%)
+  content: 'XS - iPhone-Portrait #{$media-query--xs}'
+  display: block
+  font-size: 12px
+  font-weight: 400
+  padding: 5px 0 3px
+  text-align: center
+  z-index: 1000
+
+  @include breakpoint(s)
+    content: 'S - iPhone-Landscape #{$media-query--s}'
+
+  @include breakpoint(m)
+    content: 'M - iPad-Portrait #{$media-query--m}'
+
+  @include breakpoint(l)
+    content: 'L - iPad-Landscape #{$media-query--l}'
+
+  @include breakpoint(xl)
+    content: 'XL - Desktop #{$media-query--xl}'

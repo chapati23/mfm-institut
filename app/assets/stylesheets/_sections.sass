@@ -8,6 +8,12 @@
   padding: 20px
   position: absolute
 
+  +breakpoint(xs)
+    display: none
+
+  +breakpoint(s)
+    display: none
+
   & + .icon-remove-sign
     color: lighten($grey, 20%)
     cursor: pointer
@@ -26,6 +32,12 @@
       color: $grey
       text-shadow: none
       transform: translateY(1px)
+
+    +breakpoint(xs)
+      display: none
+
+    +breakpoint(s)
+      display: none
 
   h1
     color: $green
@@ -78,16 +90,66 @@
     text-align: center
     z-index: 1
 
+    +breakpoint(xs)
+      height: 16.5rem
+
+    +breakpoint(s)
+      height: 16.5rem
+
     &:hover
       border-color: lighten($green, 20%)
       box-shadow: 0 0 8px $green
       cursor: pointer
       transition: box-shadow 200ms ease-out
 
+      +breakpoint(xs)
+        border-color: lightgrey
+        box-shadow: none
+        cursor: default
+
+      +breakpoint(s)
+        border-color: lightgrey
+        box-shadow: none
+        cursor: default
+
+
     &.active
       border-color: lighten($green, 20%)
       box-shadow: 0 0 8px $green
       transition: all 200ms cubic-bezier(.10, .70, .10, 1)
+
+      +breakpoint(xs)
+        border-color: lightgrey
+        box-shadow: none
+
+      +breakpoint(s)
+        border-color: lightgrey
+        box-shadow: none
+
+    &.produktoptimierung
+      +breakpoint(xs)
+        margin-top: 100px
+
+      +breakpoint(s)
+        float: left
+        margin-right: 5px
+        width: 267.5px
+
+    &.produktprofilierung
+      +breakpoint(s)
+        float: left
+        width: 267.5px
+
+    &.produktentwicklung
+      +breakpoint(xs)
+        margin-bottom: 17.5px
+
+      +breakpoint(s)
+        left: 50%
+        margin-bottom: 20px
+        margin-left: -150px
+        margin-top: 5px
+        width: 300px
 
     h2
       color: $green
@@ -247,6 +309,11 @@ button.green
   text-align: center
   width: 90px
 
+  +breakpoint(xs)
+    display: none
+
+  +breakpoint(s)
+    display: none
 
   &:hover, &.active
     background: linear-gradient(darken(#5CB6A7, 5%), darken($green, 5%))
