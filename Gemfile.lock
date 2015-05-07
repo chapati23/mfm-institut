@@ -139,6 +139,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
   coffee-rails (~> 4.0.0)
   haml
   jbuilder (~> 1.2)
