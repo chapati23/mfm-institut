@@ -47,7 +47,7 @@ GEM
     execjs (2.0.1)
     git (1.2.6)
     gli (2.8.0)
-    haml (4.0.3)
+    haml (4.0.6)
       tilt
     highline (1.6.19)
     hike (1.2.3)
